@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+    <class>MainWindow</class>
+    <widget class="QMainWindow" name="MainWindow">
+        <property name="windowTitle">
+            <string>Music Recognition App</string>
+        </property>
+        <widget class="QWidget" name="centralwidget">
+            <layout class="QVBoxLayout">
+                <item>
+                    <layout class="QHBoxLayout">
+                        <item><widget class="QPushButton" name="btnUpload"><property name="text"><string>Upload WAV File</string></property></widget></item>
+                        <item><widget class="QPushButton" name="btnRecord"><property name="text"><string>Record (For 10s)</string></property></widget></item>
+                        <item><widget class="QPushButton" name="btnPlay"><property name="text"><string>Play</string></property></widget></item>
+                        <item><widget class="QPushButton" name="btnStop"><property name="text"><string>Stop</string></property></widget></item>
+                    </layout>
+                </item>
+                <item>
+                    <widget class="QTextEdit" name="txtResults">
+                        <property name="readOnly"><bool>true</bool></property>
+                    </widget>
+                </item>
+            </layout>
+        </widget>
+    </widget>
+    <resources/>
+    <connections/>
+</ui>
