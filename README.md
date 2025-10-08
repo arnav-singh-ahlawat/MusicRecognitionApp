@@ -16,6 +16,8 @@ A real-time **audio fingerprinting and music recognition system** built in **C++
 
 ## 🎬 App Demo
 
+https://github.com/user-attachments/assets/351a88d6-7a6c-4d1d-abaf-486839b29ba8
+
 ---
 
 ## 🛠️ Prerequisites (Windows 11 target environment)
@@ -85,6 +87,8 @@ If running fails due to missing Qt DLLs, use the Qt deployment tool while being 
 - **Record (For 10s)** → Capture mic input → Recognize against database.
 - **Play/Stop** → Playback uploaded audio for testing.
 - **Database reset** → Delete `music.db` or run `VACUUM`.
+
+<img width="1280" height="758" alt="Image" src="https://github.com/user-attachments/assets/4bbbb799-6eb4-4313-a658-c22832b11b2d" />
 
 ---
 
