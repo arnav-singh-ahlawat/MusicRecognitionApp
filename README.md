@@ -67,7 +67,7 @@ To enable GPU acceleration:
 cmake -G "MinGW Makefiles" -DUSE_OPENCL=ON -DCMAKE_PREFIX_PATH="C:/Qt/6.9.2/mingw_64/lib/cmake" -B build
 cmake --build build
 ```
-- When `USE_OPENCL=ON`: project links against `OpenCL::OpenCL`, compiles GPU code, and enables `magnitudeBatch()` for magnitude computation.
+- When `USE_OPENCL=ON`: project links against `OpenCL::OpenCL`, compiles GPU code, and enables `magnitudeBatch()` for magnitude/power spectrum computation.
 - When `USE_OPENCL=OFF` (default): GPU code is **not compiled**, and only CPU paths run.
 
 ### 4. Run the Application
