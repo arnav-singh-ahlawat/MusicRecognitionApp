@@ -82,7 +82,7 @@ target_link_libraries(MusicRecognitionApp PRIVATE
 
 # ---- Optional OpenCL Acceleration ----
 if(USE_OPENCL)
-    # Link against OpenCL if GPU acceleration is enabled
+    # Link against OpenCL if GPU acceleration is enabled and OpenCL is found
     find_package(OpenCL)
     if(OpenCL_FOUND)
         target_link_libraries(MusicRecognitionApp PRIVATE OpenCL::OpenCL)
