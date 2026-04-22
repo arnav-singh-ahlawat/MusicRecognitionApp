@@ -83,8 +83,14 @@ target_link_libraries(MusicRecognitionApp PRIVATE
 # ---- Optional OpenCL Acceleration ----
 if(USE_OPENCL)
     # Link against OpenCL if GPU acceleration is enabled
-    target_link_libraries(MusicRecognitionApp PRIVATE OpenCL::OpenCL)
-    target_compile_definitions(MusicRecognitionApp PRIVATE USE_OPENCL=1)
+    find_package(OpenCL)
+    if(OpenCL_FOUND)
+        target_link_libraries(MusicRecognitionApp PRIVATE OpenCL::OpenCL)
+        target_compile_definitions(MusicRecognitionApp PRIVATE USE_OPENCL=1)
+    else()
+        message(WARNING "USE_OPENCL is ON, but OpenCL was not found. Falling back to CPU.")
+        target_compile_definitions(MusicRecognitionApp PRIVATE USE_OPENCL=0)
+    endif()
 else()
     # Fallback: CPU-only execution
     target_compile_definitions(MusicRecognitionApp PRIVATE USE_OPENCL=0)
