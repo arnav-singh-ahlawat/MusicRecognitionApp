@@ -66,7 +66,7 @@ std::vector<std::pair<uint32_t,int>> Fingerprint::compute(const std::vector<int1
         // ---- FFT ----
         miniFFT::fft(buf);
 
-        // ---- Magnitude/power spectrum (GPU first, CPU fallback) ----
+        // ---- Magnitude and power spectrum (GPU first, CPU fallback) ----
         bool usedGPU = false;
         #if USE_OPENCL
         if (g_opencl.ok()) {
