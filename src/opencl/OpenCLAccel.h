@@ -32,7 +32,7 @@ public:
     /// Check if initialization succeeded
     bool ok() const { return m_ok; }
 
-    /// Example API: batch magnitude computation (stub)
+    /// Example API: batch magnitude and power computation (stub)
     bool magnitudeBatch(const std::vector<float>& frames,
                         int frameCount,
                         int frameSize,
