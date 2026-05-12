@@ -8,7 +8,7 @@
  *
  * Pipeline:
  *   1. Split signal into overlapping frames with Hann window.
- *   2. Run FFT on each frame and compute magnitude spectrum.
+ *   2. Run FFT on each frame and compute magnitude and power spectrum.
  *   3. Select strongest spectral peaks per frame.
  *   4. Pair anchor peaks with future peaks (target zone).
  *   5. Encode each (f1, f2, Δt) tuple into a 32-bit hash.
