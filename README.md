@@ -67,7 +67,7 @@ To enable GPU acceleration:
 cmake -G "MinGW Makefiles" -DUSE_OPENCL=ON -DCMAKE_PREFIX_PATH="C:/Qt/6.9.2/mingw_64/lib/cmake" -B build
 cmake --build build
 ```
-- When `USE_OPENCL=ON`: project links against `OpenCL::OpenCL`, compiles GPU code, and enables `magnitudeBatch()` for magnitude/power spectrum computation.
+- When `USE_OPENCL=ON`: project links against `OpenCL::OpenCL`, compiles GPU code, and enables `magnitudeBatch()` for magnitude and power spectrum computation.
 - When `USE_OPENCL=OFF` (default): GPU code is **not compiled**, and only CPU paths run.
 
 ### 4. Run the Application
@@ -120,7 +120,7 @@ ffmpeg -i <input-audio>.mp3 -ar 44100 -ac 1 -sample_fmt s16 -map_metadata -1 <ou
 
 ## ⚡ Known Limitations
 - Supports only `.wav` (PCM16) audio format.
-- OpenCL acceleration covers only magnitude computation (not FFT).
+- OpenCL acceleration covers only magnitude and power spectrum computation (not FFT).
 - Matching algorithm is simple (vote-based).
 - GUI is minimal (basic upload/record/play/stop flow).
 
